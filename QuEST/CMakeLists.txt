@@ -358,3 +358,12 @@ if (QUEST_MEMCHECK)
     message(FATAL_ERROR "clang compiler required with QUEST_MEMCHECK: found ${CMAKE_CXX_COMPILER_ID}")
   endif()
 endif()
+
+# -----------------------------------------------------------------------------
+# ----- INSTALL LIBRARY -------------------------------------------------------
+# -----------------------------------------------------------------------------
+
+install(TARGETS QuEST PUBLIC_HEADER)
+install(FILES include/QuEST.h DESTINATION include/QuEST/${DIR})
+install(FILES include/QuEST_complex.h DESTINATION include/QuEST/${DIR})
+install(FILES include/QuEST_precision.h DESTINATION include/QuEST/${DIR})
